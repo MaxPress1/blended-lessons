@@ -1,5 +1,3 @@
-
-
 // Запропонуйте користувачу ввести число за допомогою prompt().
 // Збережіть введене значення у змінну number.
 // Перевірте, чи дорівнює змінна number числу 10:
@@ -19,6 +17,8 @@
 //     alert('Невірно');
 
 // }
+
+// alert(number === 10 ? "Вірно" : "Невірно");
 
 
 
@@ -79,7 +79,7 @@
 // Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'): 
 // <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples>
 
-// const minutes = Number(prompt('Введіть кількість хвилин'));
+// const minutes = prompt('Введіть кількість хвилин');
 
 // const hours = Math.floor(minutes / 60);
 // const formattingMinutes = minutes % 60;
@@ -224,3 +224,106 @@
 // }
 
 // console.log(fizzBuzz(122));
+
+
+// Написати функцію extractAfterSubstring,
+// яка приймає два аргументи: рядок str і підрядок substr.
+// Функція повинна повертати частину рядка, що йде після першого входження підрядка.
+// Якщо підрядок не знайдено, функція повинна повертати порожній рядок.
+
+// function extractAfterSubstring(str, substr) {
+
+//     const indexStr = str.indexOf(substr);
+
+//     if (indexStr >= 0) {
+//         return str.slice(indexStr + substr.length);
+//     } else {
+//         return `""`;
+//     }
+// }
+
+// // Приклади використання:
+// console.log(extractAfterSubstring('Hello, world!', 'world')) // "!"
+// console.log(extractAfterSubstring('Hello, world!', 'JavaScript')) // ""
+// console.log(extractAfterSubstring('Hello, world!', 'Hello')) // ", world!"
+
+// Написати функцію removeCharacter, яка приймає два аргументи:
+// рядок str і символ char.Функція повинна повертати новий рядок,
+//   у якому всі входження символу char видалені. Використовуйте цикл while
+
+// function removeCharacter(str, char) {
+
+//     let index = str;
+
+//     while (index.includes(char)) {
+//         index = index.replace(char, "");
+//     }
+//     return index;
+// }
+
+// Приклади використання:
+// console.log(removeCharacter('Hello, world!', 'o')) // "Hell, wrld!"
+// console.log(removeCharacter('JavaScript', 'a')) // "JvScript"
+// console.log(removeCharacter('12345', '3')) // "1245"
+
+
+//Дано рядок, який складається із символів.Напишіть функію
+// яка перевіряє, що першим символом цього рядка є літера 'a'.
+//  Якщо це так - вивести "так", у іншому випадку вивести "ні"
+
+// const string = 'abcde' // тестовий рядок 1
+// const stringSecond = 'bcde' // тестовий рядок 2
+
+// function str(strings) {
+//     if (strings.startsWith("a")) {
+//         return `Так`;
+//     } else {
+//         return `Hі`;
+//     }
+// }
+
+// console.log(str(stringSecond));
+// console.log(str(string));
+
+
+// Написати функцію countOccurrences, яка приймає два аргументи:
+// рядок str і символ char.Функція повинна повертати кількість входжень
+// символу char у рядку str.
+
+// function countOccurrences(str, char) {
+//     let count = 0; 
+
+//     for (let index = 0; index < str.length; index++) {
+//         if (str[index] === char) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// Приклади використання:
+// console.log(countOccurrences('Hello, world!', 'o')) // 2
+// console.log(countOccurrences('JavaScript', 'a')) // 2
+// console.log(countOccurrences('12345', '3')) // 1
+
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+
+// for (let product of products) {
+//   if (product.name === productName) {
+//     return product.price;
+//   } else {
+//       return null;
+//   }
+// }
+  
+// }
+
+// console.log(getProductPrice("Radar"));
+
+
